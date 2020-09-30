@@ -1,0 +1,23 @@
+<ion-content class="scrolling">
+  <section>
+    <ion-grid>
+      <div *ngIf="brag">
+        <google-chart [data]="columnChart"></google-chart>
+      </div>
+
+      <ion-row class="ion-justify-content-center">
+        <ion-col class="ion-align-self-center">
+          <ion-button
+            color="primary"
+            expand="block"
+            size="default"
+            fill="solid"
+            (click)="onBack()"
+            >Inicio</ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+</ion-content>
+<!--- </ion-content>  <!--- --->

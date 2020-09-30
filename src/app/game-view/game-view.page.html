@@ -1,0 +1,46 @@
+<!--<ion-header>
+  <ion-toolbar>
+    <ion-title>GameView</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>
+--->
+
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+  <ion-title>Hey!</ion-title>
+</ion-toolbar>
+
+<ion-content padding class="home">
+  <ion-grid *ngIf="currentQuiz" class="home">
+    <ion-row>
+      <ion-col width-50 offset-25>
+        <!--<ion-label class="category">-->
+        <!--<b>Categoría: </b>{{currentQuiz.category}}-->
+        <!--</ion-label>-->
+        <!--<ion-label class="category">     -->
+        <!--<b>Dificultad: </b>{{currentQuiz.difficulty}}-->
+        <!--</ion-label>-->
+
+        <h2 class="question" [innerHTML]="currentQuiz.question"></h2>
+
+        <ion-list class="bgtransparent">
+          <ion-item
+            color="none"
+            class="answers"
+            *ngFor="let answer of answers"
+            (click)="handleAnswer(answer)"
+          >
+            {{answer}}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <button class="boton_iniciar" ion-button (click)="onBack()">Atrás</button>
+</ion-content>

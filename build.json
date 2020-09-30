@@ -1,0 +1,54 @@
+{
+    "ios": {
+        "debug": {
+            "codeSignIdentity": "iPhone Distribution",
+            "provisioningProfile": "xxxxxxx-xxxxx-xxx-xxxx-xxxxx",
+            "developmentTeam": "xxxxxx",
+            "packageType": "ad-hoc",
+            "iCloudContainerEnvironment": "Development",
+            "buildFlag": [
+                "LD_RUNPATH_SEARCH_PATHS = \"@executable_path/Frameworks\""
+            ]
+        },
+        "release": {
+            "codeSignIdentity": "iPhone Distribution",
+            "provisioningProfile": "xxxxxxx-xxxxx-xxx-xxxx-xxxxx",
+            "developmentTeam": "xxxxxxx",
+            "packageType": "app-store",
+            "iCloudContainerEnvironment": "Production",
+            "buildFlag": [
+                "LD_RUNPATH_SEARCH_PATHS = \"@executable_path/Frameworks\""
+            ]
+        }
+    },
+    "android": {
+        "debug": {
+            "keystore": "/home/anfelbar/.android/debug.keystore",
+            "storePassword": "android",
+            "alias": "androiddebugkey",
+            "password": "android",
+            "keystoreType": ""
+        },
+        "release": {
+            "keystore": "PATH/TO/my-release-key.keystore",
+            "storePassword": "PASSWORD",
+            "alias": "ALIAS",
+            "password": "PASSWORD",
+            "keystoreType": ""
+        },
+        "device": {
+            "keystore": ".PATH/TO/my-release-key.keystore",
+            "storePassword": "PASSWORD",
+            "alias": "ALIAS",
+            "password": "PASSWORD",
+            "keystoreType": ""
+        },
+        "emulator": {
+            "keystore": "../build-config/android/xxxx.keystore",
+            "storePassword": "*******",
+            "alias": "xxxxxx",
+            "password": "*******",
+            "keystoreType": ""
+        }
+    }
+}
